@@ -1,0 +1,15 @@
+Checks: >  # Список групп проверок, которые мы включаем:
+  clang-analyzer-*, # Поиск утечек памяти, разыменования null-указателей (критично для твоих new/delete).
+  bugprone-*,
+  modernize-*,
+  readability-*,
+  -modernize-use-trailing-return-type,
+  -readability-magic-numbers,
+  -readability-identifier-length
+WarningsAsErrors: ''
+HeaderFilterRegex: 'structures/.*'
+ # Поиск утечек памяти, разыменования null-указателей
+ # Поиск типовых ошибок
+ # Советы по использованию современного C++
+  # Советы по улучшению читаемости кода
+  # убираю конкретные надоедливые предупреждения

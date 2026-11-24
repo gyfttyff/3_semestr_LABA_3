@@ -1,0 +1,6 @@
+---
+BasedOnStyle: Google # Берём за основу строгий стиль Google
+IndentWidth: 4 # Используем 4 пробела для отступа
+ColumnLimit: 120 # Максимальная длина строки 120 символов
+AllowShortFunctionsOnASingleLine: Empty  
+PointerAlignment: Left # Указатели прижимаем к имени переменной
