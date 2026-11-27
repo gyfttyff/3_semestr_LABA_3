@@ -120,9 +120,8 @@ public:
         if (!file.is_open()) return false;
         HClear();
         int cap;
-        if (cap < 0 || cap > 1000000) return false;
-
         if (!(file >> cap)) return false;
+        if (cap < 0 || cap > 1000000) return false;
         HInit(cap);
         for (int i = 0; i < capacity; i++) {
             file >> state[i];
@@ -150,10 +149,10 @@ public:
         if (!file.is_open()) return false;
         HClear();
         int cap;
-        if (cap < 0 || cap > 1000000) return false;
 
         file.read(reinterpret_cast<char*>(&cap), sizeof(int));
         if (!file) return false;
+        if (cap < 0 || cap > 1000000) return false;
         HInit(cap);
         file.read(reinterpret_cast<char*>(state), capacity * sizeof(int));
         for (int i = 0; i < capacity; i++) {
